@@ -85,3 +85,17 @@ function generatePoster() {
 
     poster.src = "poster.png?v=" + Date.now();
 }
+
+
+function downloadPoster() {
+
+    const canvas = document.getElementById("canvas");
+
+    const link = document.createElement("a");
+
+    link.download = "poster.png";
+
+    link.href = canvas.toDataURL("image/png");
+
+    link.click();
+}
