@@ -32,7 +32,6 @@ function generatePoster() {
 
                 ctx.beginPath();
 
-                // Circle Frame
                 ctx.arc(
                     195,
                     770,
@@ -44,13 +43,13 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
-                // Photo Position & Size
+                // EXTRA LARGE PHOTO
                 ctx.drawImage(
                     userImg,
-                    30,
-                    560,
-                    500,
-                    500
+                    -100,
+                    420,
+                    750,
+                    750
                 );
 
                 ctx.restore();
