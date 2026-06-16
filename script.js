@@ -32,26 +32,38 @@ function generatePoster() {
 
                 ctx.beginPath();
 
-                // PHOTO CIRCLE
-                ctx.arc(190, 760, 220, 0, Math.PI * 2);
+                // Circle Position
+                ctx.arc(
+                    195,
+                    770,
+                    215,
+                    0,
+                    Math.PI * 2
+                );
 
                 ctx.closePath();
                 ctx.clip();
 
+                // Photo Position & Size
                 ctx.drawImage(
                     userImg,
-                    -30,
-                    540,
-                    440,
-                    440
+                    5,
+                    575,
+                    380,
+                    380
                 );
 
                 ctx.restore();
 
                 let fontSize = 42;
 
-                if (name.length > 20) fontSize = 32;
-                if (name.length > 30) fontSize = 26;
+                if (name.length > 20) {
+                    fontSize = 32;
+                }
+
+                if (name.length > 30) {
+                    fontSize = 26;
+                }
 
                 ctx.fillStyle = "#7c2d6a";
                 ctx.textAlign = "center";
