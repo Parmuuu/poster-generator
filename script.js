@@ -1,3 +1,4 @@
+```javascript
 function generatePoster() {
 
     const name = document.getElementById("name").value;
@@ -32,10 +33,14 @@ function generatePoster() {
 
                 ctx.beginPath();
 
+                const circleX = 305;
+                const circleY = 805;
+                const circleRadius = 260;
+
                 ctx.arc(
-                    305,
-                    805,
-                    260,
+                    circleX,
+                    circleY,
+                    circleRadius,
                     0,
                     Math.PI * 2
                 );
@@ -43,16 +48,25 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
-                // KEEP ORIGINAL PHOTO RATIO
-                const scale = 780 / userImg.width;
+                // COVER MODE (Instagram/WhatsApp style)
+
+                const circleDiameter = circleRadius * 2;
+
+                const scale = Math.max(
+                    circleDiameter / userImg.width,
+                    circleDiameter / userImg.height
+                );
 
                 const imgWidth = userImg.width * scale;
                 const imgHeight = userImg.height * scale;
 
+                const imgX = circleX - (imgWidth / 2);
+                const imgY = circleY - (imgHeight / 2);
+
                 ctx.drawImage(
                     userImg,
-                    -5,
-                    435,
+                    imgX,
+                    imgY,
                     imgWidth,
                     imgHeight
                 );
@@ -104,3 +118,4 @@ function downloadPoster() {
 
     link.click();
 }
+```
