@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Poster Generator</title>
+    <title>Poster Generator</title>
 </head>
 <body>
 
-<h2>Poster Generator</h2>
+    <h2>Poster Generator</h2>
 
-<input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="name" placeholder="Enter Name">
 
-<br><br>
+    <br><br>
 
-<input type="file" id="photo" accept="image/*">
+    <input type="file" id="photo" accept="image/*">
 
-<br><br>
+    <br><br>
 
-<button onclick="generatePoster()">
-Generate Poster
-</button>
+    <button onclick="generatePoster()">
+        Generate Poster
+    </button>
 
-<br><br>
+    <br><br>
 
-<canvas id="canvas" width="1080" height="1350"></canvas>
+    <button onclick="downloadPoster()">
+        Download Poster
+    </button>
 
-<script src="script.js"></script>
+    <br><br>
+
+    <canvas id="canvas" width="1080" height="1350"></canvas>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
