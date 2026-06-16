@@ -83,5 +83,5 @@ function generatePoster() {
 
     };
 
-    poster.src = "poster.png";
+    poster.src = "poster.png?v=" + Date.now();
 }
