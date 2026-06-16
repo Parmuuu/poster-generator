@@ -33,8 +33,8 @@ function generatePoster() {
                 ctx.beginPath();
 
                 ctx.arc(
-                    300,
-                    800,
+                    305,
+                    805,
                     260,
                     0,
                     Math.PI * 2
@@ -45,8 +45,8 @@ function generatePoster() {
 
                 ctx.drawImage(
                     userImg,
-                    -10,
-                    430,
+                    -5,
+                    435,
                     780,
                     780
                 );
