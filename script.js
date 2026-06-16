@@ -86,7 +86,6 @@ function generatePoster() {
     poster.src = "poster.png?v=" + Date.now();
 }
 
-
 function downloadPoster() {
 
     const canvas = document.getElementById("canvas");
