@@ -33,8 +33,8 @@ function generatePoster() {
                 ctx.beginPath();
 
                 ctx.arc(
-                    220,
-                    790,
+                    250,
+                    800,
                     260,
                     0,
                     Math.PI * 2
