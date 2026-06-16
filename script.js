@@ -32,17 +32,18 @@ function generatePoster() {
 
                 ctx.beginPath();
 
-                ctx.arc(165, 265, 125, 0, Math.PI * 2);
+                // PHOTO CIRCLE
+                ctx.arc(190, 760, 220, 0, Math.PI * 2);
 
                 ctx.closePath();
                 ctx.clip();
 
                 ctx.drawImage(
                     userImg,
-                    40,
-                    140,
-                    250,
-                    250
+                    -30,
+                    540,
+                    440,
+                    440
                 );
 
                 ctx.restore();
@@ -54,12 +55,12 @@ function generatePoster() {
 
                 ctx.fillStyle = "#7c2d6a";
                 ctx.textAlign = "center";
-                ctx.font = `bold ${fontSize}px Arial`;
+                ctx.font = `italic bold ${fontSize}px Georgia`;
 
                 ctx.fillText(
                     name,
                     canvas.width / 2,
-                    poster.height - 180
+                    poster.height - 130
                 );
 
             };
