@@ -43,12 +43,18 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
+                // KEEP ORIGINAL PHOTO RATIO
+                const scale = 780 / userImg.width;
+
+                const imgWidth = userImg.width * scale;
+                const imgHeight = userImg.height * scale;
+
                 ctx.drawImage(
                     userImg,
                     -5,
                     435,
-                    780,
-                    780
+                    imgWidth,
+                    imgHeight
                 );
 
                 ctx.restore();
