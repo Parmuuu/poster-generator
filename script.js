@@ -1,4 +1,3 @@
-```javascript
 function generatePoster() {
 
     const name = document.getElementById("name").value;
@@ -48,7 +47,7 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
-                // COVER MODE (Instagram/WhatsApp style)
+                // COVER MODE (fills entire circle)
 
                 const circleDiameter = circleRadius * 2;
 
@@ -110,12 +109,7 @@ function downloadPoster() {
 
     const canvas = document.getElementById("canvas");
 
-    const link = document.createElement("a");
+    const image = canvas.toDataURL("image/png");
 
-    link.download = "poster.png";
-
-    link.href = canvas.toDataURL("image/png");
-
-    link.click();
+    window.open(image, "_blank");
 }
-```
