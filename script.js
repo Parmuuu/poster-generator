@@ -33,9 +33,9 @@ function generatePoster() {
                 ctx.beginPath();
 
                 ctx.arc(
-                    195,
-                    770,
-                    215,
+                    220,
+                    790,
+                    260,
                     0,
                     Math.PI * 2
                 );
@@ -46,10 +46,10 @@ function generatePoster() {
                 // EXTRA LARGE PHOTO
                 ctx.drawImage(
                     userImg,
-                    -100,
-                    420,
-                    750,
-                    750
+                    -80,
+                    430,
+                    780,
+                    780
                 );
 
                 ctx.restore();
