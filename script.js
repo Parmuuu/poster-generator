@@ -47,7 +47,7 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
-                // COVER MODE (fills entire circle)
+                // COVER MODE
 
                 const circleDiameter = circleRadius * 2;
 
@@ -111,5 +111,9 @@ function downloadPoster() {
 
     const image = canvas.toDataURL("image/png");
 
-    window.open(image, "_blank");
+    const newTab = window.open();
+
+    newTab.document.write(
+        '<img src="' + image + '" style="width:100%">'
+    );
 }
