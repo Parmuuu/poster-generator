@@ -44,13 +44,13 @@ function generatePoster() {
                 ctx.closePath();
                 ctx.clip();
 
-                // Photo Position
+                // Photo Position & Size
                 ctx.drawImage(
                     userImg,
-                    -20,
+                    30,
+                    560,
                     500,
-                    450,
-                    450
+                    500
                 );
 
                 ctx.restore();
